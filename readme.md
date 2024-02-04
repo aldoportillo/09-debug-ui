@@ -140,7 +140,7 @@ gui
 
 ```
 
-## Create Folder
+## Create Folder and More
 
 Step 1: Declare Folder
 
@@ -152,5 +152,27 @@ const cubeTweaks = gui.addFolder("cool cube")
 
 Step 2: Add to folder not gui directly!
 
-Step 3: Use .close() method to have it closed default
+Step 3 (optional): Use .close() method to have it closed default
 
+Step 4 (optional): You can nest folders so you can even add a folder to cubeTweaks like we did to gui in step 1
+
+Step 5 (optional): Pass Params to GUI
+
+```javascript
+const gui = new GUI({
+    width: 300,
+    title: 'Debug UI',
+    closeFolders: false,
+
+})
+```
+
+Step 6 (optional): Toggle debugger
+
+```javascript
+window.addEventListener('keydown', (e) => {
+    if (event.key == 'h'){
+        gui.show(gui._hidden)
+    }
+})
+```
